@@ -1,0 +1,11 @@
+name: notebooks-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - jupyter
+  - numpy
+  - matplotlib
+  - ca-certificates
+  - openssl
+prefix: /home/rcremese/mambaforge/envs/notebooks-env
