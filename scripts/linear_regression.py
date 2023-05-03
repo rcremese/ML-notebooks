@@ -28,10 +28,12 @@ def generate_propagation(function, tmax=7, noise_std=STD, nb_samples=NB_SAMPLES)
     noise = np.random.normal(0, noise_std, nb_samples)
     return time, history + noise
 
-def plot_propagation_evolutions(time, history):
+def plot_propagation_evolutions(time, history, interp_poly : np.polynomial.Polynomial = None):
     fig, ax = plt.subplots()
     ax.set(xlabel='time (in days)', ylabel='number of positive cases', title='Time evolution of the infection')
     ax.plot(time, history, 'ob')
+    if interp_poly is not None:
+        ax.plot(time, interp_poly(time), '-r')
     fig.show()
 
 def first_propagation():
