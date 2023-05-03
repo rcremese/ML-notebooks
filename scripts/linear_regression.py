@@ -6,7 +6,7 @@ STD = 1
 NB_SAMPLES = 50
 
 f = lambda x: 2 * x + 1
-g = lambda x: 3 * x**2 - 2*x + 1
+g = lambda x: x**2 - 24*x
 h = lambda x: 0.1 * np.exp(x)
 
 def animate_time_evolution(time : np.ndarray, history : np.ndarray):
